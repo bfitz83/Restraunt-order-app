@@ -5,4 +5,4 @@ Done so far:
 
 Next step:
 
-    -render the choices on the website
+    DONE    -render the choices on the website
