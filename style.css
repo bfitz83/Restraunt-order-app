@@ -5,10 +5,15 @@ body {
     align-items: center;
     font-family: 'Smythe';
     font-style: normal;
+    background-color: #e0e0e0;
 }
 
 .container {
     width: 600px;
+    height: 100vh;
+    background-color: #ffffff;
+    padding: 0;
+    margin: 0;
 }
 
 /* This is the header stuff. just need to polish */
