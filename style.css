@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Smythe';
+    font-style: normal;
+}
+
+.container {
+    width: 600px;
+}
+
+/* This is the header stuff. just need to polish */
+
+    header {
+        background-image: url("images/ferks-guare-KEZdWfYD-ow-unsplash 1.png");
+        background-position: center;
+        color: #ffffff;
+    }
+
+    .restraunt-name {
+        padding: 30px;
+    }
+
+/* This is for the order info */
+
+    #order-conformation{
+        display: none;
+    }
+
+/* This is for the credit card info */
+
+    #cc-pop-up {
+        display: none;
+    }
+
+
+
+
+

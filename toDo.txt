@@ -1,0 +1,8 @@
+Done so far:
+
+    -header
+    -importing the menu items
+
+Next step:
+
+    -render the choices on the website
