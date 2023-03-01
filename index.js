@@ -32,8 +32,10 @@ document.addEventListener("click", function(e){
             })[0]
         makeOrderDisplay(targetMenuItem)
         targetMenuItem.isDisplayed = true
-    } else if (e.target.id = "confirmOrderBtn") {
+    } else if (e.target.id === "confirmOrderBtn") {
         console.log("display credit info") // Add pop up ****************************************
+    } else if (e.target.id === "place-order") {
+        console.log("order placed")
     }
    
 })
