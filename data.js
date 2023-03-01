@@ -4,6 +4,7 @@ export let menuItems = [
         image: "null",
         ingredients: ["beef", "cheese", "letuce"],
         price: "$12",
+        isDisplayed: false,
         uuid: "a"
     },
     {
@@ -11,13 +12,15 @@ export let menuItems = [
         image: "null",
         ingredients: ["pepporni", "mushroom", "mozzerela"],
         price: "$14",
+        isDisplayed: false,
         uuid: "b"
     },
     {
         name: "Beer",
         image: "null",
         ingredients: ["grain", "hops", "yeast", "water"],
-        price: 12,
+        price: "$12",
+        isDisplayed: false,
         uuid: "c"
     },
 ]
