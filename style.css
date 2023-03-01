@@ -46,7 +46,7 @@ body {
 /* This is for the order info */
 
     #order-conformation{
-        display: none;
+        display: flex;
     }
 
 /* This is for the credit card info */
