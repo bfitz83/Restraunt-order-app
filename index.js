@@ -17,8 +17,8 @@ let itemTotalArray = []
                         <div class="menu-div">
                             <p>${item.name}</p>
                             <p>${item.ingredients}</p>
-                            <p data-price="${item.price}">$${item.price}</p>
                         </div>
+                    <p data-price="${item.price}">$${item.price}</p>
                     <button id="add-btn" data-name="${item.uuid}">+</button>
                 </div>        
             `
@@ -53,23 +53,22 @@ function makeOrderDisplay(x){
         orderSelection.innerHTML += 
             `
                 <div class="ordered-item">
-                    <p>${x.name}</p>
-                    <p>$${x.price}</p>
+                    <p>${x.name} (<span id="quantityOrdered-${x.uuid}">${x.quantityOrdered}</span>)</p>
+                    <p>$<span id="price-${x.uuid}">${x.price}</span></p>
                 </div>
             `
 
         } else {
-            // this will just add the prices
-            // make the price add up **************************************************
-                                                                        // /\
-        }                                                               // |
-    // this raises the number of individual item ordered. for top price    |
-            // just need to multiply that by x.price above **************************************
-    x.quantityOrdered++    
-    console.log(x.quantityOrdered)
+            document.getElementById(`price-${x.uuid}`).innerText = x.price * x.quantityOrdered
+            document.getElementById(`quantityOrdered-${x.uuid}`).innerText = x.quantityOrdered                                                                
+        }                                                               
+    
+    // this raises the number of individual item ordered   
+        x.quantityOrdered++    
+    
     // this makes the grand total
-    itemTotalArray.push(x.price)
-    total.innerText = "$" + itemTotalArray.reduce((x, y) => {
-        return x + y}, 0)
+        itemTotalArray.push(x.price)
+        total.innerText = "$" + itemTotalArray.reduce((x, y) => {
+            return x + y}, 0)
 }
 

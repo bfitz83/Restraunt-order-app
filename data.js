@@ -4,7 +4,7 @@ export let menuItems = [
         image: "null",
         ingredients: ["beef", "cheese", "letuce"],
         price: 12,
-        quantityOrdered: 0,
+        quantityOrdered: 1,
         isDisplayed: false,
         uuid: "a"
     },
@@ -13,7 +13,7 @@ export let menuItems = [
         image: "null",
         ingredients: ["pepporni", "mushroom", "mozzerela"],
         price: 14,
-        quantityOrdered: 0,
+        quantityOrdered: 1,
         isDisplayed: false,
         uuid: "b"
     },
@@ -22,7 +22,7 @@ export let menuItems = [
         image: "null",
         ingredients: ["grain", "hops", "yeast", "water"],
         price: 12,
-        quantityOrdered: 0,
+        quantityOrdered: 1,
         isDisplayed: false,
         uuid: "c"
     },
