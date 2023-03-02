@@ -3,7 +3,8 @@ export let menuItems = [
         name: "Burger",
         image: "null",
         ingredients: ["beef", "cheese", "letuce"],
-        price: "$12",
+        price: 12,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: "a"
     },
@@ -11,7 +12,8 @@ export let menuItems = [
         name: "Pizza",
         image: "null",
         ingredients: ["pepporni", "mushroom", "mozzerela"],
-        price: "$14",
+        price: 14,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: "b"
     },
@@ -19,7 +21,8 @@ export let menuItems = [
         name: "Beer",
         image: "null",
         ingredients: ["grain", "hops", "yeast", "water"],
-        price: "$12",
+        price: 12,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: "c"
     },

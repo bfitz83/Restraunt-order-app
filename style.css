@@ -8,6 +8,7 @@ body {
     font-family: 'Smythe';
     font-style: normal;
     background-color: #e0e0e0;
+    position: relative;
 }
 
 .container {
@@ -52,13 +53,29 @@ body {
 
     #order-selection {
         display: flex;
+        flex-direction: column;
+    }
+
+    .ordered-item{
+        display: flex;
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ordered-item p {
+        padding: 0;
+        margin: 0;
     }
 
 /* This is for the credit card info */
 
     #cc-pop-up {
         display: none;
+        position: absolute;
+        width: 40vw;
+        height: 60vh;
+        background-color: black;
     }
 
 
