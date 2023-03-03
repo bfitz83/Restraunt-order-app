@@ -6,3 +6,5 @@ Done so far:
 Next step:
 
     DONE    -render the choices on the website
+
+    - finish the styling
