@@ -13,13 +13,15 @@ let itemTotalArray = []
         menuItems.forEach(function(item){
             menuItemsSection.innerHTML += `
             <div class="align">
-                    <img scr="${item.image}">
-                        <div class="menu-div">
-                            <p>${item.name}</p>
-                            <p>${item.ingredients}</p>
-                        </div>
-                    <p data-price="${item.price}">$${item.price}</p>
-                    <button id="add-btn" data-name="${item.uuid}">+</button>
+                    <div class="menu-div">
+                        <img scr="${item.image}">
+                        <p>${item.name}</p>
+                        <p>${item.ingredients}</p>
+                    </div>
+                    <div>
+                        <p data-price="${item.price}">$${item.price}</p>
+                        <button id="add-btn" data-name="${item.uuid}">+</button>
+                    </div>    
                 </div>        
             `
         }

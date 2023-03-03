@@ -31,6 +31,9 @@ body {
     }
 
 /* This is the menu items */
+    #menu-items-section{
+        padding: 0 15px;
+    }
 
     #menu-items-section p {
         padding: 0;
@@ -38,10 +41,12 @@ body {
     }
 
     .align {
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid rgb(163, 163, 163);
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         margin: 10px;
+        text-align: justify;
     }
 
 /* This is for the order info */
