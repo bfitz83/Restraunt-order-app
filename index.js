@@ -41,9 +41,14 @@ let itemTotalArray = []
             targetMenuItem.isDisplayed = true
         } else if (e.target.id === "confirm-order-btn") {
             ccPopUp.style.display = "flex"
-            console.log("display credit info") // center pop up ****************************************
         } else if (e.target.id === "place-order") {
-            console.log("order placed") // add form and whatnot *******************************************
+            ccPopUp.innerHTML = 
+                `
+                    <div id="thank-you-div">
+                        <h1>Thank you!</h1>
+                        <p>Your order will arive shortly</p>
+                    </div>
+                `
         }
     
     })
