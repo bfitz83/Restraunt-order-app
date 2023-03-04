@@ -7,4 +7,5 @@ Next step:
 
     DONE    -render the choices on the website
 
-    - finish the styling
+    DONEISH - finish the styling
+    -add remove button

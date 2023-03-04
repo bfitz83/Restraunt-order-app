@@ -14,12 +14,14 @@ let itemTotalArray = []
             menuItemsSection.innerHTML += `
             <div class="align">
                     <div class="menu-div">
-                        <img scr="${item.image}">
-                        <p>${item.name}</p>
-                        <p>${item.ingredients}</p>
+                        <img src="${item.image}">
+                        <div>
+                            <p><b>${item.name}</b></p>
+                            <p class="ingredients">${item.ingredients}</p>
+                            <p class="price" data-price="${item.price}"><b>$${item.price}</b></p>
+                        </div>    
                     </div>
                     <div>
-                        <p data-price="${item.price}">$${item.price}</p>
                         <button id="add-btn" data-name="${item.uuid}">+</button>
                     </div>    
                 </div>        
@@ -32,13 +34,21 @@ let itemTotalArray = []
 // This event listener now filters out the selected menu item and sends it
 //     to be rendered to the order confermantion section
 
+
+            // might have to remove target menu item stuff to make remove work
+
+function makeTargetMenuItem(e){
+    let targetMenuItem = menuItems.filter(function(item){
+        return item.uuid === e.target.dataset.name
+    })[0]
+    makeOrderDisplay(targetMenuItem)
+    targetMenuItem.isDisplayed = true
+}
+
     document.addEventListener("click", function(e){
     if(e.target.id === "add-btn"){
-                let targetMenuItem = menuItems.filter(function(item){
-                    return item.uuid === e.target.dataset.name
-                })[0]
-            makeOrderDisplay(targetMenuItem)
-            targetMenuItem.isDisplayed = true
+            makeTargetMenuItem(e) 
+            document.getElementById("order-conformation").style.display = "flex"
         } else if (e.target.id === "confirm-order-btn") {
             ccPopUp.style.display = "flex"
         } else if (e.target.id === "place-order") {
@@ -49,7 +59,7 @@ let itemTotalArray = []
                         <p>Your order will arive shortly</p>
                     </div>
                 `
-        }
+        } 
     
     })
 
@@ -60,12 +70,13 @@ function makeOrderDisplay(x){
         orderSelection.innerHTML += 
             `
                 <div class="ordered-item">
-                    <p>${x.name} (<span id="quantityOrdered-${x.uuid}">${x.quantityOrdered}</span>)</p>
+                    <p>${x.name} (<span id="quantityOrdered-${x.uuid}">${x.quantityOrdered}</span>)<span id="remove"> remove<span></p>
                     <p>$<span id="price-${x.uuid}">${x.price}</span></p>
                 </div>
             `
 
-        } else {
+        } 
+        else {
             document.getElementById(`price-${x.uuid}`).innerText = x.price * x.quantityOrdered
             document.getElementById(`quantityOrdered-${x.uuid}`).innerText = x.quantityOrdered                                                                
         }                                                               
@@ -77,5 +88,10 @@ function makeOrderDisplay(x){
         itemTotalArray.push(x.price)
         total.innerText = "$" + itemTotalArray.reduce((x, y) => {
             return x + y}, 0)
+}
+
+function removeItem(x){
+    x.quantityOrdered--
+    console.log(x.quantityOrdered)
 }
 

@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 export let menuItems = [
     {
         name: "Burger",
-        image: "null",
+        image: "images/burger.png",
         ingredients: ["beef", "cheese", "letuce"],
         price: 12,
         quantityOrdered: 1,
@@ -12,7 +12,7 @@ export let menuItems = [
     },
     {
         name: "Pizza",
-        image: "null",
+        image: "images/pizza.png",
         ingredients: ["pepporni", "mushroom", "mozzerela"],
         price: 14,
         quantityOrdered: 1,
@@ -21,7 +21,7 @@ export let menuItems = [
     },
     {
         name: "Beer",
-        image: "null",
+        image: "images/beer.png",
         ingredients: ["grain", "hops", "yeast", "water"],
         price: 12,
         quantityOrdered: 1,

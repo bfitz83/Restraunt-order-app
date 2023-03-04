@@ -13,6 +13,7 @@ body {
 
 .container {
     width: 600px;
+    height: 100%;
     background-color: #ffffff;
     padding: 0;
     margin: 0;
@@ -49,10 +50,25 @@ body {
         text-align: justify;
     }
 
+    .menu-div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ingredients {
+        font-size: 10px;
+        color: rgb(187, 187, 187);
+        padding-bottom: 10px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
 /* This is for the order info */
 
     #order-conformation{
-        display: flex;
+        display: none;
         flex-direction: column;
     }
 
@@ -71,6 +87,12 @@ body {
     .ordered-item p {
         padding: 0;
         margin: 0;
+    }
+
+    #remove {
+        color: rgb(187, 187, 187);
+        cursor: pointer;
+        font-size: 14px;
     }
 
 /* This is for the credit card info */
@@ -98,6 +120,12 @@ body {
 
     }
 
+    img {
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+    }
+
     button {
         background-color: #16DB99;
         color: #ffffff;
@@ -122,6 +150,8 @@ body {
     #thank-you-div h1, p {
         padding: 10px;
     }
+
+    
 
 
 
