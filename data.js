@@ -6,7 +6,7 @@ export let menuItems = [
         image: "images/burger.png",
         ingredients: ["beef", "cheese", "letuce"],
         price: 12,
-        quantityOrdered: 1,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: uuidv4()
     },
@@ -15,7 +15,7 @@ export let menuItems = [
         image: "images/pizza.png",
         ingredients: ["pepporni", "mushroom", "mozzerela"],
         price: 14,
-        quantityOrdered: 1,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: uuidv4()
     },
@@ -24,7 +24,7 @@ export let menuItems = [
         image: "images/beer.png",
         ingredients: ["grain", "hops", "yeast", "water"],
         price: 12,
-        quantityOrdered: 1,
+        quantityOrdered: 0,
         isDisplayed: false,
         uuid: uuidv4()
     },

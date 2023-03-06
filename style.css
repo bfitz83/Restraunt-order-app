@@ -89,7 +89,7 @@ body {
         margin: 0;
     }
 
-    #remove {
+    .remove {
         color: rgb(187, 187, 187);
         cursor: pointer;
         font-size: 14px;
